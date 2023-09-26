@@ -27,8 +27,8 @@ pipeline {
             steps {
               withDockerRegistry([credentialsId: "docker-hub", url: "https://quay.io/"]) {
                 sh 'printenv'
-                sh 'sudo docker build -t quay.io/anshuk6469/numeric-app:""$GIT_COMMIT"" .'
-                sh 'docker push quay.io/anshuk6469/numeric-app:""$GIT_COMMIT""'
+                sh 'sudo docker build -t quay.io/singh_saumya0208/numeric-app:""$GIT_COMMIT"" .'
+                sh 'docker push quay.io/singh_saumya0208/numeric-app:""$GIT_COMMIT""'
             }
          }
       }
